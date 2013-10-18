@@ -1,0 +1,1 @@
+find \( -iname '*.mk' -o -iname 'makefile' -o -iname '*.h' -o -iname '*.c' -o -iname '*.cpp' -o -iname '*.java' -o -iname '*.aidl' -o -iname '*.xml' -o -iname '*.s' -o -iname '*.sh' \) -type f >cscope.files

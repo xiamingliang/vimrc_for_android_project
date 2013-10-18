@@ -1,0 +1,15 @@
+[color]
+	ui = auto
+[user]
+	name = xiamingliang
+	email = xiamingliang@wingtech.com
+[diff]
+	external = ~/git-diff.sh
+[core]
+	editor = vim
+	quotepath = false
+	pager = less -+$LESS -FRX
+[alias]
+	co = checkout
+	ci = commit
+	logs = log --stat --abbrev-commit
