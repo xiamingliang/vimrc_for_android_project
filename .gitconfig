@@ -1,8 +1,8 @@
 [color]
 	ui = auto
 [user]
-	name = xiamingliang
-	email = xiamingliang@wingtech.com
+	name = 
+	email = 
 [diff]
 	external = ~/git-diff.sh
 [core]
