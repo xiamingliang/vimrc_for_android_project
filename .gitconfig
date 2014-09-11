@@ -1,15 +1,16 @@
 [color]
-	ui = auto
+    ui = auto
 [user]
-	name = 
-	email = 
+    name = 
+    email = 
 [diff]
-	external = ~/git-diff.sh
+    external = ~/git-diff.sh
 [core]
-	editor = vim
-	quotepath = false
-	pager = less -+$LESS -FRX
+    editor = vim
+    quotepath = false
+    pager = less -+$LESS -FRX
+    excludesfile = ~/.gitignore
 [alias]
-	co = checkout
-	ci = commit
-	logs = log --stat --abbrev-commit
+    co = checkout
+    ci = commit
+    logs = log --stat --abbrev-commit
