@@ -1,0 +1,11 @@
+1 将所有的文件放置于home目录下
+2 如果不是终端，请使用gvim代替vim
+3 普通的操作请google(插入、删除、几种编辑模式切换等等)
+4 请安装ctags cscope——代码跳转支持  beyongcompare——文件比较支持
+5 按F5之前请生成cscope的检索文件(source ~/android.files, 也可以自定义命令)
+6 F3会保存Session, 第二次打开请执行gvim -S(或者自己指定Session文件)
+7 修改字体以及大小 set guifont=Monospace\ 13
+8 定义了Ctrl-c v x s 用法同windows
+9 设置了 set expandtab, 如果编辑makefile请务必set noet
+
+脚本不是很完善，如果追究完美，请自行修改
