@@ -13,7 +13,7 @@ set nu
 set noautowrite     " 离开文件时不自动保存文件
 set hidden          " all buffer hidden
 set backspace=indent,eol,start    "set backspace=2
-set guifont=Monospace\ 12
+set guifont=Menlo\ Regular:h16
 set history=100
 "--------------------------------------------------------------------------------
 " character code set
@@ -250,9 +250,9 @@ nmap <F7> :!svn diff --diff-cmd ~/svn-diff.sh -r PREV <C-R>=expand("%:p")<CR> 2>
 nmap <F8> :!svn diff --diff-cmd ~/svn-diff.sh -r PREV:COMMITTED <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 
 "git diff
-nmap <C-F6> :!git diff HEAD -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <C-F7> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
-nmap <C-F8> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . tmp[0] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
+nmap <D-F6> :!git diff HEAD -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
+nmap <D-F7> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
+nmap <D-F8> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . tmp[0] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
 "nmap <C-F7> :!git diff -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 "nmap <C-F8> :!git diff --cached -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 
