@@ -245,9 +245,9 @@ nmap <silent><F10> :botright cw<CR>
 nmap <silent><F11> :ccl<CR>
 
 "svn diff
-nmap <F6> :!svn diff --diff-cmd ~/svn-diff.sh <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <F7> :!svn diff --diff-cmd ~/svn-diff.sh -r PREV <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <F8> :!svn diff --diff-cmd ~/svn-diff.sh -r PREV:COMMITTED <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
+nmap <F6> :!svn diff --diff-cmd ~/bin/svn-diff.sh <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
+nmap <F7> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
+nmap <F8> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV:COMMITTED <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 
 "git diff
 nmap <D-F6> :!git diff HEAD -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>

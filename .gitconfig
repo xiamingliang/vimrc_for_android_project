@@ -4,7 +4,7 @@
     name = 
     email = 
 [diff]
-    external = ~/git-diff.sh
+    external = ~/bin/git-diff.sh
 [core]
     editor = vim
     quotepath = false
@@ -14,3 +14,5 @@
     co = checkout
     ci = commit
     logs = log --stat --abbrev-commit
+[push]
+	default = simple
