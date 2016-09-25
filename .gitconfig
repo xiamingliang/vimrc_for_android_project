@@ -13,6 +13,10 @@
 [alias]
     co = checkout
     ci = commit
-    logs = log --stat --abbrev-commit
+    logx = log --stat --abbrev-commit
+    diffx = diff --no-ext-diff
+    st = status
+    br = branch
+    cp = cherry-pick
 [push]
 	default = simple
