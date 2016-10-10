@@ -10,7 +10,7 @@ endif
 
 let g:colors_name="desert_based"
 
-hi Normal	guifg=#DEDEDE guibg=grey20      "fg gray,brightness+12
+hi Normal	guifg=#CCCCCC guibg=grey20      
 hi LineNr   guifg=#E5B01C guibg=grey20
 hi Cursor	guibg=khaki guifg=slategrey
 "hi CursorIM
