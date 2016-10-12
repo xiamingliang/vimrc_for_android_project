@@ -52,3 +52,5 @@ hi Underlined	cterm=underline ctermfg=5
 hi Ignore	guifg=grey40 cterm=bold ctermfg=darkgrey
 hi Error	cterm=bold ctermfg=7 ctermbg=1
 hi Todo		guifg=orangered guibg=yellow2
+
+hi UserFunction gui=NONE guifg=#B5A1FF     "purple

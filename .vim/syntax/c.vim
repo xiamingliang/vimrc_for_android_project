@@ -1,7 +1,7 @@
 " Highlight All Function
-syn match cFunction "\<[a-zA-Z_][a-zA-Z_$0-9]*\>\s*("me=e-1
-syn match cFunction "$\<[a-zA-Z_$0-9]*\>\s*("me=e-1
-hi cFunction gui=NONE guifg=#B5A1FF     "purple
+syn match UserFunction "\<[a-zA-Z_][a-zA-Z_$0-9]*\>\s*("me=e-1
+"syn match UserFunction "\<[a-zA-Z_][a-zA-Z_$0-9]*\>\s*("me=e-1 contained containedin=cParen,cCppParen,cBracket,cCppBracket
+" highlight UserFunction in desert_based.vim
 
 " Highlight All Math Operator
 " C math operators
