@@ -6,4 +6,4 @@ DIFF="bcompare"
 LEFT=${2}
 RIGHT=${5}
 
-$DIFF $LEFT  $RIGHT
+"$DIFF" "$LEFT"  "$RIGHT"
