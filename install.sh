@@ -1,2 +1,2 @@
 #!/bin/sh
-cp -av .gitconfig .vim* bin ~/
+cp -av .gitconfig .vim .vimrc bin ~/
