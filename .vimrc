@@ -1,13 +1,22 @@
-" vimrc for Android project. 
-" xiamingliang 2011
-" email: 2004mlxia@sohu.com
+" xiamingliang@gmail.com
 
-syntax enable
-syntax on
-colorscheme desert_based
+syntax enable       "or syntax on
+
+"solarized {{{
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+    let g:solarized_termcolors=256
+endif
+"let g:solarized_contrast = "normal"     "normal/high/low
+let g:solarized_menu=0
+colorscheme solarized
+"}}}
+
 set wrap            " 自动换行
 set autochdir       " 自动设置目录为正在编辑的文件所在的目录
-set nu
+set number
 "set nobackup        " no backup files 
 "set noswapfile      " no .swp files
 set noautowrite     " 离开文件时不自动保存文件
@@ -245,14 +254,14 @@ nmap <silent><F10> :botright cw<CR>
 nmap <silent><F11> :ccl<CR>
 
 "svn diff
-nmap <F6> :!svn diff --diff-cmd ~/bin/svn-diff.sh <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <F7> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <F8> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV:COMMITTED <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
+nmap <F6> :!svn diff --diff-cmd ~/bin/svn-diff.sh <C-R>=expand("%:p")<CR> &<CR>
+nmap <F7> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV <C-R>=expand("%:p")<CR> &<CR>
+nmap <F8> :!svn diff --diff-cmd ~/bin/svn-diff.sh -r PREV:COMMITTED <C-R>=expand("%:p")<CR> &<CR>
 
 "git diff
-nmap <C-F6> :!git diff HEAD -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
-nmap <C-F7> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
-nmap <C-F8> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . tmp[0] . ' -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &'<CR>
+nmap <C-F6> :!git diff HEAD -- <C-R>=expand("%:p")<CR> &<CR>
+nmap <C-F7> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . ' -- <C-R>=expand("%:p")<CR> &'<CR>
+nmap <C-F8> :let tmp = GetVer()<CR>:exe '!git diff ' . tmp[1] . tmp[0] . ' -- <C-R>=expand("%:p")<CR> &'<CR>
 "nmap <C-F7> :!git diff -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 "nmap <C-F8> :!git diff --cached -- <C-R>=expand("%:p")<CR> 2>&1 >/dev/null &<CR>
 
@@ -265,27 +274,7 @@ function! GetVer()
     let sha1 = split(list[0].list[1], "commit")
     return sha1
 endfunction
-"--------------------------------------------------------------------------------
-" useless below
-"--------------------------------------------------------------------------------
 
-"--------------------------------------------------------------------------------
-" NERDTree
-"--------------------------------------------------------------------------------
-"let NERDTreeWinPos=1      " right side
 
-"--------------------------------------------------------------------------------
-" WinManager
-"--------------------------------------------------------------------------------
-"let g:winManagerWindowLayout='TagList|FileExplorer'
-""let g:AutoOpenWinManager=1
-""nmap wm :WMToggle<cr>    w has been predefined
-
-"--------------------------------------------------------------------------------
-" minibufexpl 
-"--------------------------------------------------------------------------------
-"let g:miniBufExplMapWindowNavVim=1
-"let g:miniBufExplMapWindowNavArrows=1
-"let g:miniBufExplMapCTabSwitchBufs=1
-"let g:miniBufExplModSelTarget=1
-""let loaded_minibufexplorer=1     "disable minibufexpl
+" for c/c++/java function
+hi default link UserFunction Identifier
