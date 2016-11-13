@@ -14,7 +14,7 @@
     co = checkout
     ci = commit
     logx = log --stat --abbrev-commit
-    diffx = diff --no-ext-diff
+    dfx = diff --no-ext-diff
     st = status
     br = branch
     cp = cherry-pick
