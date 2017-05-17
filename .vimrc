@@ -25,10 +25,11 @@ set backspace=indent,eol,start    "set backspace=2
 set guifont=Menlo\ Regular:h16
 set history=100
 "--------------------------------------------------------------------------------
-" character code set
+" charset & fileformat variables:
 " encoding fileencoding fileencodings
+" fileformat fileformats
 "--------------------------------------------------------------------------------
-"set encoding=utf-8
+"set fileencoding=utf-8
 " default :ucs-bom,utf-8,default,latin1
 set fileencodings=ucs-bom,utf-8,default,chinese,latin1
 
