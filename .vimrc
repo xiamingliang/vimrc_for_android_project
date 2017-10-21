@@ -69,7 +69,7 @@ let g:current_working_dir=$PWD
 if filereadable(g:current_working_dir . "/tags")
   set tags=$PWD/tags
 endif
-nmap <F4> :exe "cd " . g:current_working_dir<CR>:exe "!/opt/local/bin/ctags -R --langmap=java:+.aidl --extra=+q"<CR>:exe "set tags=" . g:current_working_dir . "/tags"<CR>
+nmap <F4> :exe "cd " . g:current_working_dir<CR>:exe "!/opt/local/bin/ctags -R --langmap=java:+.aidl --extra=+q --sort=foldcase"<CR>:exe "set tags=" . g:current_working_dir . "/tags"<CR>
 
 "--------------------------------------------------------------------------------
 " cscope
